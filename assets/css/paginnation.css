@@ -1,0 +1,34 @@
+.gallery-page {
+    display: none;
+  }
+  
+  .gallery-page.active {
+    display: flex;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .pagination a.active {
+    background-color: #5FA599;
+    color: white;
+    border-color: #5FA599;
+  }
+  
+  .pagination a:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  

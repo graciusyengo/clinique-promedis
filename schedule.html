@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horaires de Rendez-vous</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/schedule.css" rel="stylesheet">
+
+
+  <script src="script1.js"></script>
+<script src="script.js"></script>
+
+  
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+<script type="text/javascript">
+(function(){
+emailjs.init({
+ publicKey: "UZF1ohsXpSwqR_Nyk",
+});
+})();
+
+</script>
+
+
+  
+  <style>
+   
+
+    .header {
+      background-color: #5FA599;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      border-bottom: 5px solid #4e8a76;
+    }
+
+    .i{
+  color: #5FA599 !important;
+  border-color: #5FA599 !important;
+}
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-header {
+      background-color: #5FA599;
+      color: white;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .card-body {
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .card-footer {
+      background-color: #5FA599;
+      color: white;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: #5FA599;
+    }
+
+    .card-text {
+      margin: 10px 0;
+    }
+
+    .card-text strong {
+      color: #5FA599;
+      font-size: 1.1rem; /* Augmente la taille de la police */
+      font-weight: bold; /* Rend le texte plus gras */
+    }
+
+    .fab {
+      margin-right: 10px;
+    }
+  </style>
+
+  
+</head>
+<body>
+
+
+
+   <!-- ======= Top Bar ======= -->
+   <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+        <i class="bi bi-phone"></i> + 24389980029
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+
+        <a href="https://www.youtube.com/@CliniquePromedisTv" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+        <a href="https://web.facebook.com/cliniquepromedis" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/clinique_promedis?igsh=ZWZibTBtanB4YTd6" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/adm-promedis-b45a74292/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BaaMqkH2BRhCQ2jer3K5pAw%3D%3D" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+   <!-- ====== = Header ======= -->
+   <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li><a class="nav-linkPage  " href="./about.html">A propos</a></li>
+          <li><a class="nav-linkPage" href="./succursales.html">Succursales</a></li>
+          <li><a class="nav-linkPage " href="./schedule.html">Horaire mensuel</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#departments">Departements</a> </i></li>
+          <li><a class="nav-link scrollto" href="./index.html#doctors">Medecins</a></li>
+          <li class="dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+            <ul class="scroll">
+              <li>
+                <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+              </li>
+              <li>
+                <a href="./specialConsultation.html">Consultations spécialisés </a>
+              </li>
+              <li>
+              <a href="./pediatrie.html">
+              Pédiatrie 
+              </a>
+              </li>
+              
+              <li>
+              <a href="./gynecologie.html">
+                Gynecologie
+              </a>
+              </li>
+            
+              <li>
+                <a href="./medecinInterne.html">Médecine Interne  </a>
+              </li>
+              <li>
+                <a href="./ophtamologie.html">Ophtamologie </a>
+              </li>
+              <li>
+                <a href="./dermathologie.html">Dérmatologie </a>
+              </li>
+              <li>
+                <a href="./orthopedie.html">Orthopédie </a>
+              </li>
+              <li>
+                <a href="./neuropychiatre.html">Neuropychiatrie </a>
+              </li>
+              <li>
+                <a href="./orl.html">ORL </a>
+              </li>
+              <li>
+                <a href="./dentisterie.html">Dentisterie </a>
+              </li>
+              <li>
+                <a href="./urologie.html">Urologie </a>
+              </li>
+              <li>
+                <a href="./cardiologie.html">Cardiologie </a>
+              </li>
+              <li>
+                <a href="./cpn-cps.html">CPN CPS </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+     
+      </nav><!-- .navbar -->
+
+      <div class="btn-contact">
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+        rendez-vous
+
+        
+      </a>
+      <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+      </div>
+    </div>
+   
+
+    </div>
+  </header><!-- End Header -->
+
+  <div style="margin-top: 200px;">
+    <div class="header">
+        <h1>Horaires Mensuels </h1>
+      </div>
+    
+    <div class="container">
+    <input type="text" id="searchInput" placeholder="Rechercher par service ou docteur..." class="form-control mb-4">
+    <div id="scheduleList" class="row"></div>
+  </div>
+        <div class="row" id="scheduleList">
+          <!-- Les cartes d'horaires seront ajoutées ici -->
+
+     
+      
+        </div>
+      </div>
+  </div>
+  
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>Clinique Promedis</h3>
+                <p>
+                  N 23/C  Industriel <br>
+                  10 ème Rue Limete Industriel<br>
+                   <br><br>
+                  <strong>Phone:</strong> + 2433385771<br>
+                  <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+                  <strong>Plein temps:</strong> 24h/24<br>
+                </p>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>A propos</h4>
+                <ul>
+                  <li> <a href="#">Historique</a></li>
+                  <li><a href="#">Nous connaitre</a></li>
+                
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Nos Services</h4>
+                <ul>
+                  <li> <a href="#">CPN-CPS</a></li>
+                  <li> <a href="#">Dentisterie</a></li>
+                  <li> <a href="#">Irologie</a></li>
+                  <li><a href="#">Ophtalmologie</a></li>
+                  <li><a href="#">Pédiatrie</a></li>
+                  <li> <a href="#">Irologie</a></li>
+                  <li><a href="#">Gynécologie</a></li>
+                  <li><a href="#">Pédiatrie</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                <h4>Inscrivez-vous à notre newsletter</h4>
+                <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements communautaires en vous abonnant à notre newsletter.</p>
+                <form action="" method="post">
+                  <input type="email" name="email"><input type="submit" value="Subscribe">
+                </form>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container d-md-flex py-4">
+    
+          <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+              &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+            </div>
+            <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+              Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+            </div>
+          </div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+         
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+   
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </footer><!-- End Footer -->
+
+     
+      
+       
+        
+    
+
+  <script type="module">
+    import client from './sanity.config.js';
+
+    async function fetchBranch() {
+      const query = `*[_type == "branch"] {
+        name,
+        "services": services[]->{
+          name,
+          availableAppointments,
+          "doctors": doctors[]->{
+            name,
+            availableAppointments
+          }
+        }
+      }`;
+
+      const branches = await client.fetch(query);
+      console.log(branches); // Vérifiez que les données sont bien récupérées
+      return branches;
+    }
+
+    function formatTime(timeStr) {
+      const timeObj = new Date(timeStr);
+      return !isNaN(timeObj) ? timeObj.toLocaleTimeString() : 'Invalid Time';
+    }
+
+    function formatDate(dateStr) {
+      const dateObj = new Date(dateStr);
+      const day = !isNaN(dateObj) ? dateObj.toLocaleDateString(undefined, { weekday: 'long' }) : 'Invalid Date';
+      const dateFormatted = !isNaN(dateObj) ? dateObj.toLocaleDateString() : 'Invalid Date';
+      return { dateFormatted, day };
+    }
+
+    function displayBranches(branches, searchTerm = '') {
+      const scheduleList = document.getElementById('scheduleList');
+      scheduleList.innerHTML = ''; // Clear existing content
+
+      branches.forEach(branch => {
+        branch.services?.forEach(service => {
+          if (
+            service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.doctors?.some(doctor => doctor.name.toLowerCase().includes(searchTerm.toLowerCase()))
+          ) {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4';
+            card.innerHTML = `
+              <div class="card">
+                <div class="card-header">
+                  ${branch.name || ''} - ${service.name || ''}
+                </div>
+                <div class="card-body text-center">
+                  <i class="fas fa-user-md icon"></i>
+                  <h5 class="card-title mt-2">${service.name || ''}</h5>
+                  ${service.availableAppointments?.map(appointment => {
+                    const { dateFormatted, day } = formatDate(appointment.date);
+                    const startTimeFormatted = formatTime(appointment.startTime);
+                    const endTimeFormatted = formatTime(appointment.endTime);
+
+                    return `
+                      <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                      <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                    `;
+                  }).join('') || ''}
+                  ${service.doctors?.map(doctor => `
+                    <p class="card-text"><strong>Doctor:</strong> ${doctor.name || ''}</p>
+                    ${doctor.availableAppointments?.map(appointment => {
+                      const { dateFormatted, day } = formatDate(appointment.date);
+                      const startTimeFormatted = formatTime(appointment.startTime);
+                      const endTimeFormatted = formatTime(appointment.endTime);
+
+                      return `
+                        <p class="card-text"><strong>Date:</strong> ${dateFormatted} (${day})</p>
+                        <p class="card-text"><strong>Time:</strong> ${startTimeFormatted} - ${endTimeFormatted}</p>
+                      `;
+                    }).join('') || ''}
+                  `).join('') || ''}
+                </div>
+                <div class="card-footer">
+                  <small>Clinique Promedis</small>
+                </div>
+              </div>
+            `;
+            scheduleList.appendChild(card);
+          }
+        });
+      });
+    }
+
+    function handleSearch() {
+      const searchTerm = document.getElementById('searchInput').value;
+      fetchBranch()
+        .then(branches => displayBranches(branches, searchTerm))
+        .catch(err => {
+          console.error('Error fetching branches:', err);
+        });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+    // Fetch and display all branches on initial load
+    fetchBranch()
+      .then(branches => displayBranches(branches))
+      .catch(err => {
+        console.error('Error fetching branches:', err);
+      });
+  </script>
+      
+      
+      <script> 
+
+        // Sélectionner tous les liens de navigation
+        const navLinks = document.querySelectorAll('.nav-linkPage');
+ 
+        console.log(navLinks)
+     const windowPathname = window.location.pathname;  
+ 
+     console.log(windowPathname)
+  
+ 
+ // Parcourir les liens de navigation
+ navLinks.forEach(link => {
+   // Vérifier si le lien correspond à l'URL actuelle
+   if (link.href.includes(windowPathname)) {
+    console.log(link.href.includes(windowPathname))
+     // Ajouter la classe 'active' au lien correspondant
+     link.classList.add('i');
+     console.log(link)
+   } else if(!link.href.includes(windowPathname)) {
+     // Supprimer la classe 'active' des autres liens
+     link.classList.remove('i');
+   }
+ });
+ </script>
+      
+      <script src="assets/js/main.js"></script>
+
+  
+</body>
+</html>
+

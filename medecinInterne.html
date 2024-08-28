@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/img/favicon.ico" rel="icon">
+
+   
+    <title>Medecine Interne</title>
+
+
+
+    <style>
+        #infoConsultationGeneral{
+          margin-bottom: 80px;
+        }
+    
+       #infoConsultationGeneral .container {
+          max-width: 1200px;
+          margin: 167px 0 0 166px ;
+         
+        }
+
+
+        @media  (max-width:992px) {
+          #infoConsultationGeneral .container {
+          max-width: 1200px;
+          margin: 50px 0 0 0 ;
+        
+        }
+          
+        }
+    
+        h1 {
+       
+          margin-bottom: 30px;
+        }
+    
+        h2 {
+          margin-top: 40px;
+        }
+    
+        p {
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+    
+        .cta {
+        
+          margin-top: 40px;
+        }
+    
+        .cta a {
+          background-color: #5FA599;
+          border-radius: 50px;
+    padding: 8px 25px;
+    white-space: nowrap;
+          color: white;
+          padding: 12px 24px;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 0.3s ease;
+      
+        }
+    
+        .cta a:hover {
+          background-color: #63817c;
+          color: white;
+          transform: scale(1.05);
+        }
+      </style>
+
+
+
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/medecineInterne.css" rel="stylesheet">
+        <!-- Template Main CSS File -->
+      
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+    
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "UZF1ohsXpSwqR_Nyk",
+                });
+            })();
+        </script>
+</head>
+<body>
+   
+
+   <!-- ======= Top Bar ======= -->
+   <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">cliniquepromedis@gmail.com</a>
+        <i class="bi bi-phone"></i> + 24389980029
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+
+        <a href="https://www.youtube.com/@CliniquePromedisTv" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+        <a href="https://web.facebook.com/cliniquepromedis" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/clinique_promedis?igsh=ZWZibTBtanB4YTd6" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/adm-promedis-b45a74292/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BaaMqkH2BRhCQ2jer3K5pAw%3D%3D" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+ <!-- ====== = Header ======= -->
+ <header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+        <li><a class="nav-linkPage scrollto" href="./about.html">A propos</a></li>
+        <li><a class="nav-linkPage scrollto" href="./succursales.html">Succursales</a></li>
+        <li><a class="nav-linkPage scrollto" href="./schedule.html">Horaire mensuel</a></li>
+        <li><a class="nav-link scrollto" href="#departments">Departements</a> </i></li>
+        <li><a class="nav-link scrollto" href="#doctors">Medecins</a></li>
+        <li class="dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+
+          <ul class="scroll">
+            <li>
+              <a href="./generalConsultaion.html">Consultation Generale  24/24</a>
+            </li>
+            <li>
+              <a href="./specialConsultation.html">Consultations spécialisés </a>
+            </li>
+            <li>
+            <a href="./pediatrie.html">
+            Pédiatrie 
+            </a>
+            </li>
+            
+            <li>
+            <a href="./gynecologie.html">
+              Gynecologie
+            </a>
+            </li>
+          
+            <li>
+              <a href="./medecinInterne.html">Médecine Interne  </a>
+            </li>
+            <li>
+              <a href="./ophtamologie.html">Ophtamologie </a>
+            </li>
+            <li>
+              <a href="./dermathologie.html">Dérmatologie </a>
+            </li>
+            <li>
+              <a href="./orthopedie.html">Orthopédie </a>
+            </li>
+            <li>
+              <a href="./neuropychiatre.html">Neuropychiatrie </a>
+            </li>
+            <li>
+              <a href="./orl.html">ORL </a>
+            </li>
+            <li>
+              <a href="./dentisterie.html">Dentisterie </a>
+            </li>
+            <li>
+              <a href="./urologie.html">Urologie </a>
+            </li>
+            <li>
+              <a href="./cardiologie.html">Cardiologie </a>
+            </li>
+            <li>
+              <a href="./cpn-cps.html">CPN CPS </a>
+            </li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+   
+    </nav><!-- .navbar -->
+
+    <div class="btn-contact">
+
+    <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez un
+      rendez-vous
+
+      
+    </a>
+    <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+    </div>
+  </div>
+ 
+
+  </div>
+</header><!-- End Header -->
+
+<section id="hero" class="d-flex align-items-center" >
+        <div class="container">
+            <h1>Medecine-Interne </h1>
+        </div>
+    </section> 
+
+    <section id="heroGeneralConsultation" class="d-flex align-items-center" >
+      <div class="container d-flex align-items-center justify-content-center">
+
+        <div class="d-flex flex-column mr">
+            <span class="hours"> heure service</span>
+            <span class="time">Sur rendez-vous </span>
+        </div>
+
+        <div class="d-flex flex-column mr">
+            <span class="price">prix</span>
+            <span class="text"> Ça depend de cas</span>
+        </div>
+
+       
+
+        <div class="btn-contact">
+            <a href="index.html#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Prenez
+                un
+                rendez-vous
+            </a>
+            <div class="iconWhatsapp" onclick="whatsappRedirect()"> <i class='fab fa-whatsapp-square'></i>
+            </div>
+        </div> 
+    </div>
+  </section> 
+
+        <section id="infoConsultationGeneral">
+          <div class="container">
+            <h1 class="title">Médecine Interne</h1>
+            <p class="paragraphe">La médecine interne est une spécialité médicale qui se concentre sur le diagnostic, le traitement et la gestion des maladies chez les adultes. Nos médecins internistes sont formés pour aborder une large gamme de problèmes de santé, souvent complexes, en prenant en compte l'ensemble de l'état général du patient.</p>
+        
+            <h2 class="title">Qu'est-ce que la médecine interne ?</h2>
+            <p class="paragraphe">La médecine interne est une discipline qui traite des maladies internes, généralement celles qui affectent les organes internes comme le cœur, les poumons, le foie, les reins, et le système digestif. Les médecins internistes sont des experts dans le diagnostic des maladies complexes et chroniques et dans la gestion globale de la santé du patient.</p>
+        
+            <h2 class="title">Pourquoi consulter un médecin interniste ?</h2>
+            <p class="paragraphe">Consulter un médecin interniste est crucial lorsque vous faites face à des problèmes de santé complexes ou chroniques. Les internistes possèdent une expertise approfondie dans la gestion de maladies qui peuvent nécessiter une approche intégrée et multidisciplinaire. Ils sont également compétents pour coordonner les soins avec d'autres spécialistes si nécessaire et pour offrir des conseils sur la gestion des maladies à long terme.</p>
+        
+            <h2 class="title">Que fait un médecin interniste ?</h2>
+            <p class="paragraphe">Lors d'une consultation en médecine interne, le médecin interniste effectuera une évaluation complète de votre état de santé. Il discutera de vos symptômes, de votre historique médical et des éventuels facteurs de risque. Il réalisera des examens cliniques approfondis, et peut prescrire des tests diagnostiques comme des analyses de sang, des examens d'imagerie ou d'autres évaluations spécialisées. Sur la base des résultats, il élaborera un plan de traitement adapté et pourra vous orienter vers des spécialistes si besoin.</p>
+        
+            <h2 class="title">Les domaines de la médecine interne</h2>
+            <p class="paragraphe">La médecine interne couvre divers domaines, y compris :
+                <ul>
+                    <li><strong>Cardiologie :</strong> Traitement des maladies du cœur et des vaisseaux sanguins.</li>
+                    <li><strong>Pneumologie :</strong> Gestion des maladies pulmonaires et respiratoires.</li>
+                    <li><strong>Gastro-entérologie :</strong> Soins des troubles du système digestif.</li>
+                    <li><strong>Endocrinologie :</strong> Traitement des troubles hormonaux et métaboliques.</li>
+                    <li><strong>Rhumatologie :</strong> Prise en charge des maladies articulaires et des tissus conjonctifs.</li>
+                    <li><strong>Infectiologie :</strong> Gestion des infections complexes.</li>
+                </ul>
+            </p>
+        
+            <h2 class="title">Le rôle du médecin interniste</h2>
+            <p class="paragraphe">Le médecin interniste joue un rôle clé dans la gestion des problèmes de santé complexes, en offrant une approche globale et personnalisée. Il est responsable de la coordination des soins, de la surveillance des maladies chroniques et de la fourniture de conseils pour améliorer la qualité de vie des patients. Il collabore également avec d'autres spécialistes pour offrir un traitement complet et intégré.</p>
+        
+            <div class="cta">
+                <a href="https://fr.wikipedia.org/wiki/M%C3%A9decine_interne" target="_blank">En savoir plus </a>
+            </div>
+        </div>
+        
+        </section>
+  
+
+
+
+
+
+    <footer id="footer" >
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Clinique Promedis</h3>
+                        <p>
+                            N 23/C Industriel <br>
+                            10 ème Rue Limete Industriel<br>
+                            <br><br>
+                            <strong>Phone:</strong> + 2433385771<br>
+                            <strong>Email:</strong> cliniquepromedis@gmail.com<br>
+                            <strong>Plein temps:</strong> 24h/24<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>A propos</h4>
+                        <ul>
+                            <li> <a href="#">A propos </a></li>
+                            <li><a href="#">Nos Surcursales</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nos Services</h4>
+                        <ul>
+                            <li> <a href="#">CPN-CPS</a></li>
+                            <li> <a href="#">Dentisterie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Ophtalmologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                            <li> <a href="#">Irologie</a></li>
+                            <li><a href="#">Gynécologie</a></li>
+                            <li><a href="#">Pédiatrie</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Inscrivez-vous à notre newsletter</h4>
+                        <p>Restez à jour avec les dernières avancées médicales, les conseils de santé et les événements
+                            communautaires en vous abonnant à notre newsletter.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Promedis</span></strong>. Tous droit reservé
+                </div>
+                <div class="credits">
+                   
+                    Concus <a href="https://bootstrapmade.com/">Clinique Promedis</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+              
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer> 
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

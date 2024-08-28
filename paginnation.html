@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.gallery-page {
+  display: none;
+}
+
+.gallery-page.active {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  background-color: #5FA599;
+  color: white;
+  border-color: #5FA599;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <section id="gallery" class="gallery">
+        <div class="container">
+          <div class="section-title">
+            <h2>Gallerie</h2>
+            <p></p>
+          </div>
+        </div>
+      
+        <div class="container-fluid">
+          <div class="row g-0 gallery-page active" id="page-1">
+            <!-- Images de la première page -->
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
+                  <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <!-- Ajoutez d'autres images ici pour la page 1 -->
+          </div>
+      
+          <div class="row g-0 gallery-page" id="page-2">
+            <!-- Images de la deuxième page -->
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="assets/img/gallery/gallery-5.jpg" class="galelry-lightbox">
+                  <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <!-- Ajoutez d'autres images ici pour la page 2 -->
+          </div>
+      
+          <!-- Ajoutez d'autres pages ici -->
+        </div>
+      
+        <!-- Pagination Controls -->
+        <div class="pagination">
+          <a href="#" class="prev">&laquo; Précédent</a>
+          <a href="#" class="page-link active" data-page="1">1</a>
+          <a href="#" class="page-link" data-page="2">2</a>
+          <a href="#" class="next">Suivant &raquo;</a>
+        </div>
+      </section>
+
+
+      <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const pages = document.querySelectorAll('.gallery-page');
+  const pageLinks = document.querySelectorAll('.page-link');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  let currentPage = 1;
+
+  function showPage(page) {
+    pages.forEach((pageElement, index) => {
+      if (index + 1 === page) {
+        pageElement.classList.add('active');
+      } else {
+        pageElement.classList.remove('active');
+      }
+    });
+
+    pageLinks.forEach(link => {
+      if (parseInt(link.getAttribute('data-page')) === page) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    currentPage = page;
+  }
+
+  pageLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const page = parseInt(this.getAttribute('data-page'));
+      showPage(page);
+    });
+  });
+
+  prevButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (currentPage > 1) {
+      showPage(currentPage - 1);
+    }
+  });
+
+  nextButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    if (currentPage < pages.length) {
+      showPage(currentPage + 1);
+    }
+  });
+
+  // Affichez la première page au chargement
+  showPage(1);
+});
+
+      </script>
+      
+</body>
+</html>
