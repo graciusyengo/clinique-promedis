@@ -838,6 +838,7 @@ section {
 .about .video-box {
   background: url("../img/ndukute.jpg") center center no-repeat;
   background-size: cover;
+  background-position: center top;
   min-height: 500px;
 }
 

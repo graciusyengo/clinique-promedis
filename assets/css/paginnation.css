@@ -32,3 +32,26 @@
     color: #333;
   }
   
+
+
+  @media (max-width:480px) {
+
+    .pagination{
+      align-items: center;
+    }
+    .pagination a {
+        padding: 8px 12px; /* Réduit la taille des boutons sur les petits écrans */
+        margin: 3px 2px; /* Réduit les marges pour mieux adapter l'espace */
+    }
+}
+
+@media (max-width:768px) {
+
+  .pagination{
+    align-items: center;
+  }
+  .pagination a {
+      padding: 8px 12px; /* Réduit la taille des boutons sur les petits écrans */
+      margin: 3px 2px; /* Réduit les marges pour mieux adapter l'espace */
+  }
+}

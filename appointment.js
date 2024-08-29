@@ -12,6 +12,8 @@ const doctorsByDepartment = {
     { name: "Dr Kimpiatu", value: "kimpiatu" },
     { name: "Dr MAVINGA Aldo", value: "aldo" }
   ],
+
+  
   gynecologie: [
     { name: "Dr Ndandu", value: "ndandu" },
     { name: "Dr Messia", value: "messia" },

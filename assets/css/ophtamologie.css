@@ -473,6 +473,7 @@ h6 {
   height: 90vh !important;
   background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/yeux.jpg");
   background-size: cover;
+  background-position: center top;
 
 }
 
