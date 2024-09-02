@@ -631,21 +631,15 @@ h6 {
 
 @media (max-width:768px){
 
-  #infoConsultationGeneral .container {
-        
+  #infoConsultationGeneral .container {  
     margin-top: 50px;
     margin-left: 0px;
-  
-   
   }
-
 }
 
 
 #heroGeneralConsultation .container .mr{
   margin-right: 120px;
-
-
 }
 
 .hours,.price{
