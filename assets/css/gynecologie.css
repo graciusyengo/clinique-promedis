@@ -608,16 +608,39 @@ h6 {
 
 #heroGeneralConsultation .container{
   position: absolute;
-  left: 43px;
+  left: 31px;
   bottom: -80px;
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: auto;
   background-color: white;
-  padding: 40px;
+ padding-left:100px;
+ padding-right:100px;
 
 
 }
+
+#infoConsultationGeneral .container {
+        
+  margin-top: 50px;
+  margin-left: 180px;
+
+ 
+}
+
+
+@media (max-width:768px){
+
+  #infoConsultationGeneral .container {
+        
+    margin-top: 50px;
+    margin-left: 0px;
+  
+   
+  }
+
+}
+
 
 #heroGeneralConsultation .container .mr{
   margin-right: 120px;
