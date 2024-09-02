@@ -610,13 +610,14 @@ body {
 
   #heroGeneralConsultation .container{
     position: absolute;
-    left: 43px;
+    left: 35px;
     bottom: -80px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: auto;
     background-color: white;
-    padding: 40px;
+    padding-left: 90px;
+    padding-right: 90px
   
  
 
@@ -635,7 +636,7 @@ body {
 
   .text, .time{
    color: #27477D;
-   font-size: 16px;
+   font-size: 14px;
   }
 
   
