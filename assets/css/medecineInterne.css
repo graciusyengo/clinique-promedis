@@ -471,8 +471,9 @@ h6 {
 
   width: 100%;
   height: 90vh !important;
-  background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/main.jpeg");
+  background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/medecineinterne.jpg");
   background-size: cover;
+  background-position: center top;
 
 }
 
@@ -607,13 +608,14 @@ h6 {
 
 #heroGeneralConsultation .container{
   position: absolute;
-  left: 50px;
+  left: 33px;
   bottom: -80px;
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: auto;
   background-color: white;
-  padding: 40px;
+padding-left: 100px;
+padding-right: 100px;
 
 
 }

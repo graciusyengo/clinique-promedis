@@ -464,21 +464,13 @@ h6 {
   display: block;
 }
 
-
-
-
-
-
-
-
-
 #hero {
-
   width: 100%;
   height: 90vh !important;
-  background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/main.jpeg");
+  background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/derma.jpg");
   background-size: cover;
-
+  background-position
+  : center 70% ;
 }
 
 #hero .container {

@@ -475,8 +475,9 @@ body {
   
     width: 100%;
     height: 90vh !important;
-    background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/main.jpeg");
+    background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/cardiologie.jpg");
     background-size: cover;
+    background-position: center 88%;
   
   }
   
@@ -571,6 +572,7 @@ body {
     width: 100px!important;
   
     }
+
   
     #heroGeneralConsultaion h1{
         font-size: 28px;
@@ -611,15 +613,14 @@ body {
   
   #heroGeneralConsultation .container{
     position: absolute;
-    left: 43px;
+    left: 30px;
     bottom: -80px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: auto;
     background-color: white;
-    padding: 40px;
-  
-  
+    padding-left: 100px;
+    padding-right: 100px;
   }
   
   #heroGeneralConsultation .container .mr{

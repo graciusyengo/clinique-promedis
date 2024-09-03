@@ -463,22 +463,12 @@ body {
     display: block;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
   #hero {
-  
     width: 100%;
     height: 90vh !important;
     background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/teeth.jpg");
     background-size: cover;
     background-position: center top;
-  
   }
   
   #hero .container {
@@ -572,6 +562,12 @@ body {
     width: 100px!important;
   
     }
+    #infoConsultationGeneral .container {
+      max-width: 1200px;
+      margin-left: 200px;
+    
+     
+    }
   
     #heroGeneralConsultaion h1{
         font-size: 28px;
@@ -593,7 +589,6 @@ body {
   
   
   #heroGeneralConsultation{
-  
     width: 70%;
     margin: 0 auto;
     height: 80vh;
@@ -602,25 +597,21 @@ body {
     background-color: green;
     background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/hero-bg.jpg");
     background-size: cover;
-  
-  
     margin-top: 100px;
     margin-bottom: 100px;
     /* margin-bottom: -200px; */
-  
   }
   
   #heroGeneralConsultation .container{
     position: absolute;
-    left: 43px;
+    left: 33px;
     bottom: -80px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: auto;
     background-color: white;
-    padding: 40px;
-  
-  
+    padding-left:100px ;
+    padding-right: 100px ;
   }
   
   #heroGeneralConsultation .container .mr{

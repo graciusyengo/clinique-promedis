@@ -18,21 +18,40 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+   <!-- Vendor CSS Files -->
+   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-    </script>
+ 
 
   <link href="assets/css/paginnation.css" rel="stylesheet">
   <Link href="assets//css/style.css" rel="stylesheet">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async>
+</script>
+
+
+<script>
+  // Initialisation d'EmailJS une fois que le DOM est complètement chargé
+  document.addEventListener('DOMContentLoaded', function() {
+      emailjs.init("dJgIDNZKv01djYf4M"); // Remplacez par votre clé publique
+  });
+</script>
+</script>
+
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+
+<script src="script.js"></script>
+
 </head>
 
 <body>
@@ -439,7 +458,7 @@
           <p>Pour prendre rendez-vous, veuillez utiliser notre formulaire en ligne dédié à cet effet.</p>
         </div>
 
-        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+        <form  class="php-email-form" onsubmit="sendEmail(event)">
           <div class="row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
@@ -500,7 +519,7 @@
           
           </div>
          
-          <div class="text-center" onclick="sendEmail()"><button type="submit">Prendre rendez-vous</button></div>
+          <div class="text-center" ><button type="submit">Prendre rendez-vous</button></div>
         </form>
 
       </div>
@@ -1264,7 +1283,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form  class="php-email-form"   onsubmit="sendMessage(event)">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="nameContact" class="form-control" id="nameContact" placeholder="Your Name" required>
@@ -1280,7 +1299,7 @@
                 <textarea class="form-control" name="messageContact" id="messageContact" rows="5" placeholder="Message" required></textarea>
               </div>
              
-              <div class="text-center"><button type="submit" onclick="sendMessage()">Envoyer votre message</button></div>
+              <div class="text-center"><button type="submit" >Envoyer votre message</button></div>
             </form>
 
           </div>
@@ -1386,19 +1405,12 @@
   <script src="./appointment.js"></script>
   <script src="./paginnation.js"></script>
   
-<script type="text/javascript" async>
-  (function(){
-     emailjs.init({
-       publicKey: "UZF1ohsXpSwqR_Nyk",
-     });
-  })();
 
-</script>
 <script src="script1.js"></script>
 <script src="script.js"></script>
 <script src="script2.js"></script>
 <script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async>
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" >
 </script>
 
  
