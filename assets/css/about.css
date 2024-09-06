@@ -500,7 +500,7 @@ body {
   #hero {
     width: 100%;
     height: 70vh !important;
-    background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/17.jpg");
+    background-image: linear-gradient(rgba(110,110,110,0.4),rgba(90,90,90,0.4)), url("../img/15.jpg");
     background-size: cover;
     margin-bottom: -200px;
   }
