@@ -1645,8 +1645,11 @@ body {
 
     }
     #hero{
-        height: 40vh;
-        margin-top: 60px;
+      height: 40vh !important;
+      margin-top: 60px; 
+      background-size: cover;
+      margin-top: 90px;
+      background-position: center;
     }
     
     

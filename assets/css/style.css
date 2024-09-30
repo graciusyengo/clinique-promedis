@@ -536,6 +536,16 @@ h6 {
   font-size: 24px;
 }
 
+@media(max-width:992px){
+  #hero .btn-get-started {
+   font-size: 12px !important; 
+   padding: 8px 20px !important;
+   margin-top: 0 !important;
+  
+  }
+
+}
+
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -566,22 +576,27 @@ h6 {
 @media (max-width: 992px) {
   #hero {
     margin-bottom: 0;
-    height: 100vh;
+    margin-bottom: 0;
+    height: 40vh;
+    margin-top: 100px;
+    background-position: center;
   }
 
   #hero .container {
     padding-bottom: 63px;
+    margin-top: 60px;
+  
   }
 
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 22px;
   }
 
   #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 30px
   }
 }
 
