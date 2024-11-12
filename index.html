@@ -150,10 +150,8 @@
       </div>
     </div>
    
-
     </div>
   </header><!-- End Header -->
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
@@ -504,9 +502,7 @@
             
             <div class="col-md-4 form-group mt-3">
               <select name="doctor" id="doctor" class="form-select">
-                <option value="">Sélectionner un doct
-                  
-                  eur</option>
+                <option value="">Sélectionner un docteur</option>
               </select>
               <div class="validate"></div>
             </div>
@@ -1291,11 +1287,41 @@
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" >
 </script>
 
+<script>
+  // Données des médecins en fonction des services
+  const doctorsData = {
+    internistes: ['Dr. Mavinga Aldo','Dr. Kimpiatu','Dr. Bima'],
+    gynecologie: ['Dr. Ibanda Blanchard','Dr. Messia','Dr. Ndandu'],
+    pediatrie: ['Dr. Luzolo','Dr. Mabiala','Dr. Mbaki'],
+    echographie: ['Dr. Emma Tshula','Dr. Ntunga','Dr. Mukulayanga','Dr. Mundemba'],
+    cardiologie: ['Dr. Pierre Lemoine', 'Dr. Olivia Bernard'],
+    neurologie: ['Dr. Sarah Lambert', 'Dr. Paul Lefevre'],
+    orthopedie: ['Dr. Vincent Faure', 'Dr. Anne Gauthier'],
+    kine: ['Dr. Patrick Henry', 'Dr. Hélène Grange'],
+    orl: ['Dr. Marc Dupuis', 'Dr. Claire Vasseur'],
+    ophtamologie: ['Dr. Thierry Dupont', 'Dr. Julie Lefevre'],
+    dermathologie: ['']
+  };
 
- 
-
-
-
+  // Écouteur d'événements pour le changement de service
+  document.getElementById('service').addEventListener('change', function () {
+    const service = this.value;
+    const doctorSelect = document.getElementById('doctor');
+    
+    // Vider la liste des médecins actuelle
+    doctorSelect.innerHTML = '<option value="">Sélectionner un docteur</option>';
+    
+    // Si un service est sélectionné, on met à jour la liste des médecins
+    if (service && doctorsData[service]) {
+      doctorsData[service].forEach(function (doctor) {
+        const option = document.createElement('option');
+        option.value = doctor;
+        option.textContent = doctor;
+        doctorSelect.appendChild(option);
+      });
+    }
+  });
+</script>
 
 </body>
 
